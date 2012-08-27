@@ -1,0 +1,6 @@
+<script type="text/javascript" src="../js/cvbase.js"></script>
+<div id="actions">
+    <input type="submit" value="Prev" onclick="setCommand('prev')">&nbsp;
+    <input type="submit" value="Next" onclick="setCommand('next')">&nbsp;
+    <input type="submit" value="Complete" onclick="setCommand('complete')">
+</div>

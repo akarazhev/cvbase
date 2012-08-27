@@ -1,0 +1,79 @@
+/*
+    Copyright (c) 2012. CV Base Application.
+ 
+    This file is part of CV Base Application. CV Base Application is free software:
+    you can redistribute it and/or modify it under the terms of the
+    GNU General Public License as published by the Free Software Foundation,
+    either version 3 of the License, or (at your option) any later version.
+*/
+/*
+    This is a CV Base css file.
+
+    Author:  Andrej Karazhev
+    Version: 1.0.0
+*/
+*{margin:0; padding:0;}
+body {background:#fff url(background.jpg) top center no-repeat; color:#303030; font:84% Arial,Helvetica,sans-serif; line-height:1.6em;}
+a {color:#239a23; text-decoration:none;}
+a:hover {text-decoration:underline;}
+p,ul,ol,dl {margin:0 0 30px 0;}
+h1 {color:#888; font-size:3.2em; line-height:1.1em; letter-spacing:-3px; margin:20px 0 0 0;}
+h1 a {color:#239a23; text-transform:none;}
+h2 {font-size:2.2em; color:#333; margin:0 0 20px; letter-spacing:-1px; border-bottom:2px solid #eee;}
+h3 {font-size:1.8em; margin:10px 0 15px 0; letter-spacing:-1px; border-bottom:2px solid #eee;}
+h1,h2,h3 {font-weight:700; line-height:1.4em;}
+#login {text-align:right; width:190px;}
+#column {text-align:right; width:215px;}
+#list {text-align:left; width:507px;}
+#actions {text-align:right;}
+#wrap {color:#303030; margin:40px auto; padding:0; width:980px;}
+#content {text-align:left; width:600px; padding-right:40px;}
+#content table {font-size:0.9em}
+#content th {color:#888; width:100px;}
+#content td {width:100px; text-align:center;}
+#sidebar {float:right; width:280px; padding-left:40px; border-left:2px solid #ccc; }
+#sidebar ul {list-style:none; margin:0; padding:10px 0 0 0; border-top:1px solid #eee;}
+#sidebar li {list-style:none; font-size:1.2em; margin:0 0 10px; padding:0 0 10px 0; color:#888; border-bottom:1px solid #eee;}
+#sidebar li a {font-size:1.2em;}
+#sidebar h2 {font-size: 1.4em;}
+.slogan {color:#888; font-size:1.4em; font-weight:700; margin:0 0 20px 0; letter-spacing:-1px;}
+.readmore {text-align:right; margin:0 20px 30px 0;}
+.timestamp {display:block; font-weight:700; color:#888; text-align:right; width:150px; padding:20px 20px 20px 0; float:left; margin:0 20px 20px 0; border-right:2px solid #eee;}
+.timestamp a {font-weight:normal;}
+.credits {display:block; clear:left; font-size:0.9em; color:#aaa; margin:20px 0;}
+.credits a {color:#888;}
+.clear {clear:both;}
+
+.tooltip {
+    /*border-bottom: 1px dotted #000000; color: #000000; outline: none;*/
+    border-bottom: 0px dotted #000000; color: #000000; outline: none;
+    cursor: help; text-decoration: none;
+    position: relative;
+}
+.tooltip span {
+    margin-left: -999em;
+    position: absolute;
+}
+.tooltip:hover span {
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: Calibri, Tahoma, Geneva, sans-serif;
+    position: absolute; left: 1em; top: 2em; z-index: 99;
+    margin-left: 0; width: 250px;
+}
+.tooltip:hover img {
+    border: 0; margin: -10px 0 0 -55px;
+    float: left; position: absolute;
+}
+.tooltip:hover em {
+    font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
+    display: block; padding: 0.2em 0 0.6em 0;
+}
+.classic { padding: 0.8em 1em; }
+.custom { padding: 0.5em 0.8em 0.8em 2em; }
+* html a:hover { background: transparent; }
+.classic {background: #FFFFAA; border: 1px solid #FFAD33; }
+.critical { background: #FFCCAA; border: 1px solid #FF3334;	}
+.help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+.info { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+.warning { background: #FFFFAA; border: 1px solid #FFAD33; }

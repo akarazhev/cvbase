@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012. CV Base Application.
+  ~
+  ~ This file is part of CV Base Application. CV Base Application is free software:
+  ~ you can redistribute it and/or modify it under the terms of the
+  ~ GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  -->
+<!--
+    Page:    Login error page 
+
+    Author:  Andrej Karazhev
+    Version: 1.0.0
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+    <c:set var="loginFailed" scope="request" value="error"/>
+        <jsp:forward page="/index.jspx"/>
+    <c:remove var="loginFailed" scope="request"/>
+</jsp:root>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012. CV Base Application.
+  ~
+  ~ This file is part of CV Base Application. CV Base Application is free software:
+  ~ you can redistribute it and/or modify it under the terms of the
+  ~ GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  -->
+<!--
+    Page:    The main render page 
+
+    Author:  Andrej Karazhev
+    Version: 1.0.0
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+        <jsp:include page="../WEB-INF/jsp/adminhead.jsp"/>
+        <body>
+            <div id="wrap">
+                <c:choose>
+                    <c:when test="${empty requestScope.profile}">
+                        <jsp:include page="../WEB-INF/jsp/sidebar.jsp"/>
+                    </c:when>
+                    <c:otherwise>
+                        <jsp:include page="../WEB-INF/jsp/section.jsp"/> 
+                    </c:otherwise>
+                </c:choose>
+
+                <div id="content">
+                    <c:choose>
+                        <c:when test="${empty requestScope.selector}">
+                            <h2>Welcome to CV Base Web Application</h2>
+                            <jsp:include page="../WEB-INF/jspf/text.jspf"/>
+                        </c:when>
+                        <c:otherwise>
+                            <h2><c:out value="${requestScope.selector}"/></h2>
+                            <c:choose>
+                                <c:when test="${requestScope.selector == 'Add Contact'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/contact.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Add Objective'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/objective.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Add Summary'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/summary.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Add Skills'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/skills.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Add Experience'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/experience.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Add Education'}">
+                                    <jsp:include page="../WEB-INF/jsp/add/education.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Content'}">
+                                    <jsp:include page="../WEB-INF/jsp/content.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Objective'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/objective.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Summary'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/summary.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Skills'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/skills.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Experience'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/experience.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Education'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/education.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Contact'}">
+                                    <jsp:include page="../WEB-INF/jsp/view/contact.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Error'}">
+                                    <jsp:include page="../WEB-INF/jsp/error.jsp"/>
+                                </c:when>
+                                <c:when test="${requestScope.selector == 'Logout'}">
+                                    <jsp:forward page="../WEB-INF/jsp/logout.jsp"/>
+                                </c:when>
+                            </c:choose>
+                        </c:otherwise>
+                    </c:choose>
+                    <jsp:include page="../WEB-INF/jspf/credits.jspf"/>
+                </div>
+
+            </div>
+        </body>
+    </html>
+</jsp:root>

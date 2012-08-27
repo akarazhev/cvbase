@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012. CV Base Application.
+  ~
+  ~ This file is part of CV Base Application. CV Base Application is free software:
+  ~ you can redistribute it and/or modify it under the terms of the
+  ~ GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  -->
+<!--
+    Author:  Andrej Karazhev
+    Version: 1.0.0
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.cvbase</groupId>
+    <artifactId>cvbase-parent</artifactId>
+    <name>CV Base-mvn</name>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javaee.version>6.0</javaee.version>
+        <junit.version>4.10</junit.version>
+        <mongodb.version>2.8.0</mongodb.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <modules>
+        <module>cvbase-api</module>
+        <module>cvbase-apl</module>
+        <module>cvbase-ejb</module>
+        <module>cvbase-web</module>
+        <module>cvbase-ear</module>
+    </modules>
+</project>
