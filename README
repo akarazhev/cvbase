@@ -1,0 +1,18 @@
+CV Base Application
+
+The CV Base Web Application is simple an open source application based on Java and NoSQL technologies.
+
+Quick tutorial:
+1. Install, configure and start Mongo DB server "[MONGO_DB_HOME]/bin/mongod".
+2. Install and start Glass Fish server "asadmin start-domain domain1".
+3. Add "cvadmin" user for file realm under the security functionality.
+4. Perform "git clone https://github.com/turetsky/cvbase.git". 
+5. Tweak a config file that is here: "[CVBASE_DIR]/cvbase-apl/src/main/resources/Config.properties".
+6. Perform "mvn install" under the "[CVBASE_DIR]" folder.
+7. Copy EAR from "[CVBASE_DIR]/cvbase-ear/target/cvbase-ear-*.*.*.ear" into the autodeploy folder: "[GLASSFISH_HOME]/glassfish/domains/domain1/autodeploy/" 
+8. Go to "http://yourhost:port/cvbase-web/"  
+
+Version 1.0.0:
+- Operations which have been implemented: Create, Read, Delete.
+- Used technologies: JAAS, JUnit, EJB, CDI, Servlets, JSP/JSPX, HTML, CSS, JavaScript.
+- No SQL: Mongo DB.
