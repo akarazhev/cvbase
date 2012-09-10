@@ -16,3 +16,8 @@ Version 1.0.0:
 - Operations which have been implemented: Create, Read, Delete.
 - Used technologies: JAAS, JUnit, EJB, CDI, Servlets, JSP/JSPX, HTML, CSS, JavaScript.
 - No SQL: Mongo DB.
+
+Expected changes :
+- No SQL: Orient DB, Neo4J;
+- Web Services;
+- iOS/android client.
