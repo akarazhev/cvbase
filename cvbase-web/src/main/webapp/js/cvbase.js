@@ -32,8 +32,9 @@ function setCommand(command)
  */
 function confirmDelete(id)
 {
-    var r = confirm("Do you want to delete the profile?");
-    if (r != true) {
+    var result = confirm("Do you want to delete the profile?");
+    if (result != true)
+    {
         // Disable the link
         document.getElementById(id).setAttribute("href", "");
     }

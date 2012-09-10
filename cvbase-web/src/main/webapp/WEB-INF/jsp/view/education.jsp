@@ -21,5 +21,9 @@
         <c:out value="${cont.city}"/><br />
         <c:out value="${cont.start}"/> - <c:out value="${cont.end}"/>
     </h4><br />
-    <p><c:out value="${cont.description}"/></p><br />
+
+    <p><c:out value="${cont.description}"/>
+    </p>
+
+    <br />
 </c:forEach>

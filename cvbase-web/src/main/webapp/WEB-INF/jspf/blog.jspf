@@ -1,8 +1,10 @@
 <h3>Blog post</h3>
+
 <p class="timestamp">August 20rd, 2012<br />
     Tags: <a href="#">Java</a>, <a href="#">No SQL</a>, <a href="#">JUnit</a><br />
     Author: <a href="#">CV Base</a>
 </p>
+
 <p>If you have any comments, questions, 
     bug reports or suggestions regarding this template, or 
     if you plan to customize this template into a new public theme for 

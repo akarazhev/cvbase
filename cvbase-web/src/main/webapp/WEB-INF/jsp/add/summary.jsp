@@ -19,7 +19,7 @@
         <input type="hidden" name="id" value="summary">
         <input type="hidden" name="command" id="cmd" value=""/>
 
-        <p><t:tooltip element="Details content:" content="Note: Html tags can be used. 
+        <p><t:tooltip element="Details content:" content="Note: Html tags can be used.<br />
                    Example:<br />
                    - Experience in developing applications such as client-server, 
                    web based using Java and mobile applications using Objective C.<br />
@@ -28,9 +28,7 @@
                    - Experience in Object-Oriented analysis and design. 
                    Good at various Design Patterns, UML.<br />
                    and etc."/><br />
-            <textarea rows="15" cols="70" name="summary"/>
-            ${requestScope.model.summary}
-            </textarea>
+            <textarea rows="15" cols="70" name="summary"/>${requestScope.model.summary}</textarea>
         </p>
 
         <jsp:include page="../../jspf/prevnextcomplete.jspf"/>

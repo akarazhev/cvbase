@@ -19,15 +19,13 @@
         <input type="hidden" name="id" value="objective">
         <input type="hidden" name="command" id="cmd" value=""/>
 
-        <p><t:tooltip element="Details content:" content="Note: Html tags can be used. 
+        <p><t:tooltip element="Details content:" content="Note: Html tags can be used.<br />
                    Example:<br />
                    - To obtain the position in Information Technologies where 
                    I can best contribute to the goals and
                    objectives of the company through my experience and 
                    educational background. "/><br />
-            <textarea rows="15" cols="70" name="objective"/>
-            ${requestScope.model.objective}
-            </textarea>
+            <textarea rows="15" cols="70" name="objective"/>${requestScope.model.objective}</textarea>
         </p>
 
         <jsp:include page="../../jspf/prevnextcomplete.jspf"/>

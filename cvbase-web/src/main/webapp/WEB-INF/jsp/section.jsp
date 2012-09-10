@@ -15,7 +15,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="sidebar">
     <h1><a href="index.jspx">CV Base</a></h1>
-    <p class="slogan">Save and view your cv</p>
+
+    <p class="slogan">Save and view your cv
+    </p>
+
     <ul>
         <li><a href="main.page?profile=${profile}&page=contact">Contact</a><br />
             There is an information about tel, city...</li>

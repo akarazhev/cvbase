@@ -29,4 +29,6 @@
         </tr>
     </c:forEach>
 </table>
-<p><c:out value="${requestScope.size}"/> record(s) found in base.</p>
+
+<p><c:out value="${requestScope.size}"/> record(s) found in base.
+</p>

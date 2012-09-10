@@ -2,7 +2,7 @@ CV Base Application
 
 The CV Base Web Application is simple an open source application based on Java and NoSQL technologies.
 
-Quick tutorial:
+Quick start:
 1. Install, configure and start Mongo DB server "[MONGO_DB_HOME]/bin/mongod".
 2. Install and start Glass Fish server "asadmin start-domain domain1".
 3. Add "cvadmin" user for file realm under the security functionality.

@@ -19,7 +19,7 @@
         <input type="hidden" name="id" value="skills">
         <input type="hidden" name="command" id="cmd" value=""/>
 
-        <p><t:tooltip element="Details content:" content="Note: Html tags can be used. 
+        <p><t:tooltip element="Details content:" content="Note: Html tags can be used.<br />
                    Example:<br />
                    - Languages: Java, Objective C, C/C++, SQL, AppleScript, Bash.<br />
                    - Technologies: Java SE/EE, Spring, Hibernate, iBatis, OSGI, 
@@ -27,9 +27,7 @@
                    - Databases: MySQL, PostgreSQL, SQLite.<br />
                    - No SQL: MongoDB, Neo4J, OrientDB.<br />
                    and etc."/><br />
-            <textarea rows="15" cols="70" name="skills"/>
-            ${requestScope.model.skills}
-            </textarea>
+            <textarea rows="15" cols="70" name="skills"/>${requestScope.model.skills}</textarea>
         </p>
 
         <jsp:include page="../../jspf/prevnextcomplete.jspf"/>

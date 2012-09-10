@@ -15,6 +15,10 @@ import org.cvbase.model.Experience;
 import org.cvbase.service.GenericService;
 import org.cvbase.service.ModelBuilder;
 
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 /**
  * This is an implementation of Add Education scenario.
  *
@@ -32,10 +36,10 @@ public class AddEducation extends AddCommand {
      */
     @Override
     public void execute() {
-        Education education = new ModelBuilder<Education>().set(Education.class).set(params).set(profile).getModel();
-
-        // Save model to session cache
-        session.setAttribute(Education.class.getName(), education);
+        Set<Education> education = (Set) session.getAttribute(Education.class.getName());
+        if (education == null) {
+            education = new LinkedHashSet<Education>();
+        }
 
         if ("complete".equals(command)) {
             // Create a model
@@ -43,7 +47,17 @@ public class AddEducation extends AddCommand {
         } else if ("prev".equals(command)) {
             // Set a next page and check session cache
             selector = "Add Experience";
-            model = (Experience) session.getAttribute(Experience.class.getName());
+            Set<Experience> experience = (Set) session.getAttribute(Experience.class.getName());
+            if (experience != null && experience.size() > 0) {
+                model = experience.toArray(new Experience[experience.size()])[experience.size() - 1];
+            }
+        } else if ("add".equals(command)) {
+            // Add a new education info
+            education.add(new ModelBuilder<Education>().set(Education.class).set(params).set(profile).getModel());
+            selector = "Add Education";
         }
+
+        // Save models to session cache
+        session.setAttribute(Education.class.getName(), education);
     }
 }

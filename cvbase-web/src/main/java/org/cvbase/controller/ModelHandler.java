@@ -35,6 +35,7 @@ public final class ModelHandler {
         session.removeAttribute(Skills.class.getName());
         session.removeAttribute(Experience.class.getName());
         session.removeAttribute(Education.class.getName());
+
         // Remove a profile name 
         session.removeAttribute("profile");
     }
@@ -48,36 +49,43 @@ public final class ModelHandler {
      */
     public static boolean create(GenericService service, HttpSession session) {
         List<CV> models = new LinkedList<CV>();
+
         // Get contact model from session cache
         CV model = (Contact) session.getAttribute(Contact.class.getName());
         if (model != null) {
             models.add(model);
         }
+
         // Get objective model from session cache
         model = (Objective) session.getAttribute(Objective.class.getName());
         if (model != null) {
             models.add(model);
         }
+
         // Get summary model from session cache
         model = (Summary) session.getAttribute(Summary.class.getName());
         if (model != null) {
             models.add(model);
         }
+
         // Get skills model from session cache
         model = (Skills) session.getAttribute(Skills.class.getName());
         if (model != null) {
             models.add(model);
         }
-        // Get experience model from session cache
-        model = (Experience) session.getAttribute(Experience.class.getName());
-        if (model != null) {
-            models.add(model);
+
+        // Get experience models from session cache
+        Set<Experience> experience = (Set) session.getAttribute(Experience.class.getName());
+        if (experience != null) {
+            models.addAll(experience);
         }
-        // Get education model from session cache
-        model = (Education) session.getAttribute(Education.class.getName());
-        if (model != null) {
-            models.add(model);
+
+        // Get education models from session cache
+        Set<Education> education = (Set) session.getAttribute(Education.class.getName());
+        if (education != null) {
+            models.addAll(education);
         }
+
         // Create models
         models = service.create(models);
         return !models.contains(null);
@@ -94,6 +102,7 @@ public final class ModelHandler {
         // Do query by the profile name
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("profile", profile);
+
         // Collect all models
         List<CV> models = new LinkedList<CV>();
         models.addAll(service.findWithParams(Education.class, params));
@@ -102,6 +111,7 @@ public final class ModelHandler {
         models.addAll(service.findWithParams(Summary.class, params));
         models.addAll(service.findWithParams(Objective.class, params));
         models.addAll(service.findWithParams(Contact.class, params));
+
         // Delete models
         return service.delete(models);
     }

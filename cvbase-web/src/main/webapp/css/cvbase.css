@@ -13,7 +13,7 @@
     Version: 1.0.0
 */
 *{margin:0; padding:0;}
-body {background:#fff url(background.jpg) top center no-repeat; color:#303030; font:84% Arial,Helvetica,sans-serif; line-height:1.6em;}
+body {background:#fff top center no-repeat; color:#303030; font:84% Arial,Helvetica,sans-serif; line-height:1.6em;}
 a {color:#239a23; text-decoration:none;}
 a:hover {text-decoration:underline;}
 p,ul,ol,dl {margin:0 0 30px 0;}
@@ -43,10 +43,9 @@ h1,h2,h3 {font-weight:700; line-height:1.4em;}
 .credits {display:block; clear:left; font-size:0.9em; color:#aaa; margin:20px 0;}
 .credits a {color:#888;}
 .clear {clear:both;}
-
 .tooltip {
     /*border-bottom: 1px dotted #000000; color: #000000; outline: none;*/
-    border-bottom: 0px dotted #000000; color: #000000; outline: none;
+    border-bottom: 0 dotted #000000; color: #000000; outline: none;
     cursor: help; text-decoration: none;
     position: relative;
 }
@@ -69,10 +68,9 @@ h1,h2,h3 {font-weight:700; line-height:1.4em;}
     font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
     display: block; padding: 0.2em 0 0.6em 0;
 }
-.classic { padding: 0.8em 1em; }
 .custom { padding: 0.5em 0.8em 0.8em 2em; }
 * html a:hover { background: transparent; }
-.classic {background: #FFFFAA; border: 1px solid #FFAD33; }
+.classic {background: #FFFFAA; border: 1px solid #FFAD33; padding: 0.8em 1em 0.8em 1em; text-align: justify; }
 .critical { background: #FFCCAA; border: 1px solid #FF3334;	}
 .help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
 .info { background: #9FDAEE; border: 1px solid #2BB0D7;	}

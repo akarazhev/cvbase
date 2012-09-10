@@ -26,6 +26,7 @@
             <t:tooltip element="Last Name:" content="Candidate's last name. Example: Karazhev"/>
             <input type="text" name="lastName" value="${requestScope.model.lastName}">
         </p>
+
         <p><t:tooltip element="Country:" content="Candidate's country. Example: Belarus"/>
             <input type="text" name="country" value="${requestScope.model.country}"><br />
             <t:tooltip element="City:" content="Candidate's city. Example: Minsk"/>
@@ -37,12 +38,13 @@
             <t:tooltip element="Address:" content="Candidate's address."/>
             <input type="text" name="address" value="${requestScope.model.address}"><br />
         </p>
+
         <p><t:tooltip element="Phone:" content="Candidate's phone number."/>
             <input type="text" name="phone" value="${requestScope.model.phone}"><br />
             <t:tooltip element="Email:" content="Candidate's email address."/>
             <input type="text" name="email" value="${requestScope.model.email}"><br />
-            <t:tooltip element="Site:" content="Candidate's web site. 
-                       Example: http://www.linkedin.com/pub/andrey-karazhev/49/89a/a7a"/>
+            <t:tooltip element="Site:" content="Candidate's web site.
+                    Example: http://www.linkedin.com/pub/andrey-karazhev/49/89a/a7a"/>
             <input type="text" name="website" value="${requestScope.model.website}"><br />
         </p>
 

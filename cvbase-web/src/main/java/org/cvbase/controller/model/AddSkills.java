@@ -16,6 +16,8 @@ import org.cvbase.model.Summary;
 import org.cvbase.service.GenericService;
 import org.cvbase.service.ModelBuilder;
 
+import java.util.Set;
+
 /**
  * This is an implementation of Add Skills scenario.
  *
@@ -44,7 +46,10 @@ public class AddSkills extends AddCommand {
         } else if ("next".equals(command)) {
             // Set a next page and check session cache
             selector = "Add Experience";
-            model = (Experience) session.getAttribute(Experience.class.getName());
+            Set<Experience> experience = (Set) session.getAttribute(Experience.class.getName());
+            if (experience != null && experience.size() > 0) {
+                model = experience.toArray(new Experience[experience.size()])[experience.size() - 1];
+            }
         } else if ("complete".equals(command)) {
             // Create a model
             selector = ModelHandler.create(service, session) ? "" : "Error";

@@ -18,13 +18,17 @@
     <h4><c:out value="${cont.firstName}"/>
         <c:out value="${cont.middleInitial}"/>
         <c:out value="${cont.lastName}"/></h4><br />
+
     <p><c:out value="${cont.city}"/>,
-    <c:out value="${cont.state}"/>,
-    <c:out value="${cont.country}"/><br />
-    <c:out value="${cont.zipCode}"/>,
-    <c:out value="${cont.address}"/></p>
-<p>Phone: <c:out value="${cont.phone}"/><br />
-Email: <a href="mailto:${cont.email}">${cont.email}</a><br />
-Site: <a href="${cont.website}">${cont.website}</a>
-</p>
+       <c:out value="${cont.state}"/>,
+       <c:out value="${cont.country}"/><br />
+       <c:out value="${cont.zipCode}"/>,
+       <c:out value="${cont.address}"/>
+    </p>
+
+    <p>Phone: <c:out value="${cont.phone}"/><br />
+       Email: <a href="mailto:${cont.email}">${cont.email}</a><br />
+       Site: <a href="${cont.website}">${cont.website}</a>
+    </p>
+
 </c:forEach>

@@ -19,6 +19,7 @@
     <input type="hidden" name="command" id="cmd" value=""/>
 
     <div id="column">
+
         <p><t:tooltip element="Company:" content="Company where candidate has worked."/>
             <input type="text" name="company" value="${requestScope.model.company}"><br />
             <t:tooltip element="Country:" content="Country where company is. Example: Belarus"/>
@@ -28,21 +29,22 @@
             <t:tooltip element="State:" content="State where company is."/>
             <input type="text" name="state" value="${requestScope.model.state}"><br />
         </p>
-        <p><t:tooltip element="Start:" content="When candidate started to work.<br />
-                   Example: August, 2007"/>
+
+        <p><t:tooltip element="Start:" content="When candidate started to work. Example: August, 2007"/>
             <input type="text" name="start" value="${requestScope.model.start}"><br />
-            <t:tooltip element="End:" content="When candidate finished to work or<br />
-                       has been working. Example: June, 2011"/>
+            <t:tooltip element="End:" content="When candidate finished to work or has been working. Example: June, 2011"/>
             <input type="text" name="end" value="${requestScope.model.end}"><br />
         </p>
-        <p><t:tooltip element="Position:" content="The occupied position. Example:<br />
-                   Software Engineer"/>
+
+        <p><t:tooltip element="Position:" content="The occupied position. Example: Software Engineer"/>
             <input type="text" name="position" value="${requestScope.model.position}">
         </p>
+
     </div>   
 
     <div id="list">
-        <p><t:tooltip element="Details content:" content="Note: Html tags can be used. Example:<br /><br />
+
+        <p><t:tooltip element="Details content:" content="Note: Html tags can be used.<br />Example:<br /><br />
                    Details:<br />
                    LA6112AX is product for managing SI3000 Peso. 
                    The SI3000 Peso is 32 POTS port VoIP terminal adapter (Gateway).<br /><br />
@@ -51,12 +53,10 @@
                    - Implemented java beans, handlers, components and controllers 
                    to provide a management of Plain old telephone services (POTS).<br />
                    - and etc."/><br />
-            <textarea rows="15" cols="70" name="content"/>
-            ${requestScope.model.content}
-            </textarea>
+            <textarea rows="15" cols="70" name="content"/>${requestScope.model.content}</textarea>
         </p>
 
-        <jsp:include page="../../jspf/prevnextcomplete.jspf"/>
+        <jsp:include page="../../jspf/prevnextaddcomplete.jspf"/>
     </div>
 
 </form>

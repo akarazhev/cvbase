@@ -21,6 +21,12 @@
         <c:out value="${cont.city}"/><br />
         <c:out value="${cont.start}"/> - <c:out value="${cont.end}"/>
     </h4><br />
-    <p><c:out value="${cont.position}"/></p>
-<p><c:out value="${cont.content}"/></p><br />
+
+    <p><c:out value="${cont.position}"/>
+    </p>
+
+    <p><c:out value="${cont.content}"/>
+    </p>
+
+    <br />
 </c:forEach>
